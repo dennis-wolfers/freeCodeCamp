@@ -4,6 +4,7 @@ import { check } from 'express-validator/check';
 import { ifNoUser401, createValidatorErrorHandler } from '../utils/middleware';
 import { themes } from '../../common/utils/themes.js';
 import { alertTypes } from '../../common/utils/flash.js';
+import { isValidUsername } from '../../../utils/validate';
 
 const log = debug('fcc:boot:settings');
 
@@ -104,9 +105,17 @@ function updateMyCurrentChallenge(req, res, next) {
     user,
     body: { currentChallengeId }
   } = req;
-  return user
-    .update$({ currentChallengeId })
-    .subscribe(() => res.status(200), next);
+  return user.updateAttribute(
+    'currentChallengeId',
+    currentChallengeId,
+    (err, updatedUser) => {
+      if (err) {
+        return next(err);
+      }
+      const { currentChallengeId } = updatedUser;
+      return res.status(200).json(currentChallengeId);
+    }
+  );
 }
 
 const updateMyThemeValidators = [
@@ -125,7 +134,7 @@ function updateMyTheme(req, res, next) {
   return req.user
     .updateTheme(theme)
     .then(
-      () => res.sendFlash(alertTypes.info, 'Your theme has been updated'),
+      () => res.sendFlash(alertTypes.info, 'Your theme has been updated!'),
       next
     );
 }
@@ -191,6 +200,15 @@ function createUpdateMyUsername(app) {
         message: 'Username is already associated with this account'
       });
     }
+    const validation = isValidUsername(username);
+
+    if (!validation.valid) {
+      return res.json({
+        type: 'info',
+        message: `Username ${username} ${validation.error}`
+      });
+    }
+
     const exists = await User.doesExist(username);
 
     if (exists) {
@@ -231,12 +249,12 @@ const updatePrivacyTerms = (req, res, next) => {
       type: 'success',
       message:
         'We have updated your preferences. ' +
-        'You can now continue using freeCodeCamp.'
+        'You can now continue using freeCodeCamp!'
     });
   });
 };
 
 function updateUserFlag(req, res, next) {
   const { user, body: update } = req;
-  user.updateAttributes(update, createStandardHandler(req, res, next));
+  return user.updateAttributes(update, createStandardHandler(req, res, next));
 }

@@ -2,13 +2,18 @@
 id: 5900f38e1000cf542c50fea1
 challengeType: 5
 title: 'Problem 34: Digit factorials'
+forumTopicId: 301998
 ---
 
 ## Description
 <section id='description'>
+
 145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
+
 Find the numbers and the sum of the numbers which are equal to the sum of the factorial of their digits.
-Note: as 1! = 1 and 2! = 2 are not sums they are not included.
+
+**Note:** as 1! = 1 and 2! = 2 are not sums they are not included.
+
 </section>
 
 ## Instructions
@@ -21,8 +26,12 @@ Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 
 ```yml
 tests:
-  - text: '<code>digitFactorial()</code> should return { sum: 40730, numbers: [145, 40585] }.'
-    testString: 'assert.deepEqual(digitFactorial(), { sum: 40730, numbers: [145, 40585] }, "<code>digitFactorial()</code> should return { sum: 40730, numbers: [145, 40585] }.");'
+  - text: <code>digitFactorial()</code> should return an object.
+    testString: assert.typeOf(digitFactorial(), 'object');
+  - text: |
+      <code>digitFactorial()</code> should return { sum: 40730, numbers: [145, 40585] }.
+    testString: |
+      assert.deepEqual(digitFactorial(), { sum: 40730, numbers: [145, 40585] });
 
 ```
 
@@ -56,4 +65,5 @@ digitFactorial();
 ```js
 // solution required
 ```
+
 </section>

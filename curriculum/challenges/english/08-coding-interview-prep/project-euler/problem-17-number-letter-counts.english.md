@@ -2,13 +2,18 @@
 id: 5900f37d1000cf542c50fe90
 challengeType: 5
 title: 'Problem 17: Number letter counts'
+forumTopicId: 301804
 ---
 
 ## Description
 <section id='description'>
+
 If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
-If all the numbers from 1 to given <code>limit</code> inclusive were written out in words, how many letters would be used?
-<b>NOTE:</b> Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
+If all the numbers from 1 to given `limit` inclusive were written out in words, how many letters would be used?
+
+**Note:** Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
 </section>
 
 ## Instructions
@@ -21,12 +26,14 @@ If all the numbers from 1 to given <code>limit</code> inclusive were written out
 
 ```yml
 tests:
+  - text: <code>numberLetterCounts(5)</code> should return a number.
+    testString: assert(typeof numberLetterCounts(5) === 'number');
   - text: <code>numberLetterCounts(5)</code> should return 19.
-    testString: 'assert.strictEqual(numberLetterCounts(5), 19, "<code>numberLetterCounts(5)</code> should return 19.");'
+    testString: assert.strictEqual(numberLetterCounts(5), 19);
   - text: <code>numberLetterCounts(150)</code> should return 1903.
-    testString: 'assert.strictEqual(numberLetterCounts(150), 1903, "<code>numberLetterCounts(150)</code> should return 1903.");'
+    testString: assert.strictEqual(numberLetterCounts(150), 1903);
   - text: <code>numberLetterCounts(1000)</code> should return 21124.
-    testString: 'assert.strictEqual(numberLetterCounts(1000), 21124, "<code>numberLetterCounts(1000)</code> should return 21124.");'
+    testString: assert.strictEqual(numberLetterCounts(1000), 21124);
 
 ```
 
@@ -59,7 +66,7 @@ numberLetterCounts(5);
 ```js
 function numberLetterCounts(limit) {
   const dictionary = {
-    0: ",
+    0: '',
     1: 'one',
     2: 'two',
     3: 'three',
@@ -90,7 +97,7 @@ function numberLetterCounts(limit) {
     1000: 'onethousand'
   };
 
-  let numString = ";
+  let numString = '';
 
   function convertToString(num) {
     // check dictionary for number
@@ -101,7 +108,7 @@ function numberLetterCounts(limit) {
       const tens =  Math.floor((num / 10) % 10) * 10;
       const remainder = num % 10;
 
-      let tempStr = ";
+      let tempStr = '';
 
       if (hundreds === 0) {
         tempStr += dictionary[tens] + dictionary[remainder];
@@ -119,7 +126,6 @@ function numberLetterCounts(limit) {
           tempStr += dictionary[tens] + dictionary[remainder];
         }
       }
-      // console.log(num, hundreds, tens, remainder);
       return tempStr;
     }
   }

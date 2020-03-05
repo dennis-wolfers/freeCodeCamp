@@ -3,6 +3,7 @@ id: bd7155d8c242eddfaeb5bd13
 title: Build a Recipe Box
 isRequired: false
 challengeType: 3
+forumTopicId: 302354
 ---
 
 ## Description
@@ -16,7 +17,6 @@ Fulfill the below <a href='https://en.wikipedia.org/wiki/User_story' target='_bl
 <strong>User Story:</strong> I can delete these recipes.
 <strong>User Story:</strong> All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there.
 <strong>Hint: </strong> You should prefix your local storage keys on CodePen, i.e. <code>_username_recipes</code>
-Remember to use <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>Read-Search-Ask</a> if you get stuck.
 When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
 You can get feedback on your project by sharing it with your friends on Facebook.
 </section>
@@ -47,4 +47,5 @@ tests: []
 ```js
 // solution required
 ```
+
 </section>

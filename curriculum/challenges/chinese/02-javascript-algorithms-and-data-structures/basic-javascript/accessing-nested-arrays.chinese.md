@@ -2,7 +2,6 @@
 id: 56533eb9ac21ba0edf2244cd
 title: Accessing Nested Arrays
 challengeType: 1
-guideUrl: 'https://chinese.freecodecamp.org/guide/certificates/access-array-data-with-indexes'
 videoUrl: ''
 localeTitle: 访问嵌套数组
 ---
@@ -19,9 +18,9 @@ localeTitle: 访问嵌套数组
 ```yml
 tests:
   - text: <code>secondTree</code>应该等于“松树”
-    testString: 'assert(secondTree === "pine", "<code>secondTree</code> should equal "pine"");'
+    testString: assert(secondTree === "pine");
   - text: 使用点和括号表示法访问<code>myPlants</code>
-    testString: 'assert(/=\s*myPlants\[1\].list\[1\]/.test(code), "Use dot and bracket notation to access <code>myPlants</code>");'
+    testString: assert(/=\s*myPlants\[1\].list\[1\]/.test(code));
 
 ```
 

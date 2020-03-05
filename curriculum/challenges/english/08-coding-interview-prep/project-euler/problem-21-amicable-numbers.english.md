@@ -2,14 +2,20 @@
 id: 5900f3811000cf542c50fe94
 challengeType: 5
 title: 'Problem 21: Amicable numbers'
+forumTopicId: 301851
 ---
 
 ## Description
 <section id='description'>
+
 Let d(<var>n</var>) be defined as the sum of proper divisors of <var>n</var> (numbers less than <var>n</var> which divide evenly into <var>n</var>).
+
 If d(<var>a</var>) = <var>b</var> and d(<var>b</var>) = <var>a</var>, where <var>a</var> ≠ <var>b</var>, then <var>a</var> and <var>b</var> are an amicable pair and each of <var>a</var> and <var>b</var> are called amicable numbers.
+
 For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
-Evaluate the sum of all the amicable numbers under <var>n</var>.
+
+Evaluate the sum of all the amicable numbers under `n`.
+
 </section>
 
 ## Instructions
@@ -22,14 +28,16 @@ Evaluate the sum of all the amicable numbers under <var>n</var>.
 
 ```yml
 tests:
+  - text: <code>sumAmicableNum(1000)</code> should return a number.
+    testString: assert(typeof sumAmicableNum(1000) === 'number');
   - text: <code>sumAmicableNum(1000)</code> should return 504.
-    testString: 'assert.strictEqual(sumAmicableNum(1000), 504, "<code>sumAmicableNum(1000)</code> should return 504.");'
+    testString: assert.strictEqual(sumAmicableNum(1000), 504);
   - text: <code>sumAmicableNum(2000)</code> should return 2898.
-    testString: 'assert.strictEqual(sumAmicableNum(2000), 2898, "<code>sumAmicableNum(2000)</code> should return 2898.");'
+    testString: assert.strictEqual(sumAmicableNum(2000), 2898);
   - text: <code>sumAmicableNum(5000)</code> should return 8442.
-    testString: 'assert.strictEqual(sumAmicableNum(5000), 8442, "<code>sumAmicableNum(5000)</code> should return 8442.");'
+    testString: assert.strictEqual(sumAmicableNum(5000), 8442);
   - text: <code>sumAmicableNum(10000)</code> should return 31626.
-    testString: 'assert.strictEqual(sumAmicableNum(10000), 31626, "<code>sumAmicableNum(10000)</code> should return 31626.");'
+    testString: assert.strictEqual(sumAmicableNum(10000), 31626);
 
 ```
 

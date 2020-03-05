@@ -2,12 +2,16 @@
 id: 5900f3ab1000cf542c50febe
 challengeType: 5
 title: 'Problem 63: Powerful digit counts'
+forumTopicId: 302175
 ---
 
 ## Description
 <section id='description'>
-The 5-digit number, 16807=75, is also a fifth power. Similarly, the 9-digit number, 134217728=89, is a ninth power.
-How many n-digit positive integers exist which are also an nth power?
+
+The 5-digit number, 16807 = 7<sup>5</sup>, is also a fifth power. Similarly, the 9-digit number, 134217728 = 8<sup>9</sup>, is a ninth power.
+
+How many <var>n</var>-digit positive integers exist which are also an <var>n</var>th power?
+
 </section>
 
 ## Instructions
@@ -20,8 +24,10 @@ How many n-digit positive integers exist which are also an nth power?
 
 ```yml
 tests:
-  - text: <code>euler63()</code> should return 49.
-    testString: 'assert.strictEqual(euler63(), 49, "<code>euler63()</code> should return 49.");'
+  - text: <code>powerfulDigitCounts()</code> should return a number.
+    testString: assert(typeof powerfulDigitCounts() === 'number');
+  - text: <code>powerfulDigitCounts()</code> should return 49.
+    testString: assert.strictEqual(powerfulDigitCounts(), 49);
 
 ```
 
@@ -33,12 +39,12 @@ tests:
 <div id='js-seed'>
 
 ```js
-function euler63() {
+function powerfulDigitCounts() {
   // Good luck!
   return true;
 }
 
-euler63();
+powerfulDigitCounts();
 ```
 
 </div>
@@ -53,4 +59,5 @@ euler63();
 ```js
 // solution required
 ```
+
 </section>

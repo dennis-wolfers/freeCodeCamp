@@ -2,7 +2,6 @@
 id: 56592a60ddddeae28f7aa8e1
 title: Access Multi-Dimensional Arrays With Indexes
 challengeType: 1
-guideUrl: 'https://chinese.freecodecamp.org/guide/certificates/access-array-data-with-indexes'
 videoUrl: ''
 localeTitle: 访问带索引的多维数组
 ---
@@ -19,9 +18,9 @@ localeTitle: 访问带索引的多维数组
 ```yml
 tests:
   - text: <code>myData</code>应该等于<code>8</code> 。
-    testString: 'assert(myData === 8, "<code>myData</code> should be equal to <code>8</code>.");'
+    testString: assert(myData === 8);
   - text: 您应该使用括号表示法从<code>myArray</code>读取正确的值。
-    testString: 'assert(/myArray\[2\]\[1\]/g.test(code) && !/myData\s*=\s*(?:.*[-+*/%]|\d)/g.test(code), "You should be using bracket notation to read the correct value from <code>myArray</code>.");'
+    testString: assert(/myData=myArray\[2\]\[1\]/.test(code.replace(/\s/g, '')));
 
 ```
 

@@ -2,12 +2,16 @@
 id: 5900f3701000cf542c50fe83
 challengeType: 5
 title: 'Problem 4: Largest palindrome product'
+forumTopicId: 302065
 ---
 
 ## Description
 <section id='description'>
+
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-Find the largest palindrome made from the product of two <code>n</code>-digit numbers.
+
+Find the largest palindrome made from the product of two `n`-digit numbers.
+
 </section>
 
 ## Instructions
@@ -20,10 +24,12 @@ Find the largest palindrome made from the product of two <code>n</code>-digit nu
 
 ```yml
 tests:
+  - text: <code>largestPalindromeProduct(2)</code> should return a number.
+    testString: assert(typeof largestPalindromeProduct(2) === 'number');
   - text: <code>largestPalindromeProduct(2)</code> should return 9009.
-    testString: 'assert.strictEqual(largestPalindromeProduct(2), 9009, "<code>largestPalindromeProduct(2)</code> should return 9009.");'
+    testString: assert.strictEqual(largestPalindromeProduct(2), 9009);
   - text: <code>largestPalindromeProduct(3)</code> should return 906609.
-    testString: 'assert.strictEqual(largestPalindromeProduct(3), 906609, "<code>largestPalindromeProduct(3)</code> should return 906609.");'
+    testString: assert.strictEqual(largestPalindromeProduct(3), 906609);
 
 ```
 

@@ -2,7 +2,6 @@
 id: 56533eb9ac21ba0edf2244c8
 title: Accessing Object Properties with Bracket Notation
 challengeType: 1
-guideUrl: 'https://chinese.freecodecamp.org/guide/certificates/accessing-objects-properties-with-bracket-notation'
 videoUrl: ''
 localeTitle: 使用括号表示法访问对象属性
 ---
@@ -19,15 +18,15 @@ localeTitle: 使用括号表示法访问对象属性
 ```yml
 tests:
   - text: <code>entreeValue</code>应该是一个字符串
-    testString: 'assert(typeof entreeValue === "string" , "<code>entreeValue</code> should be a string");'
+    testString: assert(typeof entreeValue === 'string' );
   - text: <code>entreeValue</code>的值应该是<code>&quot;hamburger&quot;</code>
-    testString: 'assert(entreeValue === "hamburger" , "The value of <code>entreeValue</code> should be <code>"hamburger"</code>");'
+    testString: assert(entreeValue === 'hamburger' );
   - text: <code>drinkValue</code>应该是一个字符串
-    testString: 'assert(typeof drinkValue === "string" , "<code>drinkValue</code> should be a string");'
+    testString: assert(typeof drinkValue === 'string' );
   - text: <code>drinkValue</code>的值应该是<code>&quot;water&quot;</code>
-    testString: 'assert(drinkValue === "water" , "The value of <code>drinkValue</code> should be <code>"water"</code>");'
+    testString: assert(drinkValue === 'water' );
   - text: 您应该使用括号表示法两次
-    testString: 'assert(code.match(/testObj\s*?\[("|")[^""]+\1\]/g).length > 1, "You should use bracket notation twice");'
+    testString: assert(code.match(/testObj\s*?\[('|")[^'"]+\1\]/g).length > 1);
 
 ```
 

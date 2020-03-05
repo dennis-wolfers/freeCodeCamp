@@ -2,7 +2,6 @@
 id: 56533eb9ac21ba0edf2244cc
 title: Accessing Nested Objects
 challengeType: 1
-guideUrl: 'https://chinese.freecodecamp.org/guide/certificates/accessing-nested-objects-in-json'
 videoUrl: ''
 localeTitle: 访问嵌套对象
 ---
@@ -19,9 +18,9 @@ localeTitle: 访问嵌套对象
 ```yml
 tests:
   - text: <code>gloveBoxContents</code>应该等于“地图”
-    testString: 'assert(gloveBoxContents === "maps", "<code>gloveBoxContents</code> should equal "maps"");'
+    testString: assert(gloveBoxContents === "maps");
   - text: 使用点和括号表示法访问<code>myStorage</code>
-    testString: 'assert(/=\s*myStorage\.car\.inside\[\s*("|")glove box\1\s*\]/g.test(code), "Use dot and bracket notation to access <code>myStorage</code>");'
+    testString: assert(/=\s*myStorage\.car\.inside\[\s*("|')glove box\1\s*\]/g.test(code));
 
 ```
 

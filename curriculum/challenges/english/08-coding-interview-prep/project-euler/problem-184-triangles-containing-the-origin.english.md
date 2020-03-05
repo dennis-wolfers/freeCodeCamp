@@ -2,11 +2,12 @@
 id: 5900f4241000cf542c50ff37
 challengeType: 5
 title: 'Problem 184: Triangles containing the origin'
+forumTopicId: 301820
 ---
 
 ## Description
 <section id='description'>
-Consider the set Ir of points (x,y) with integer co-ordinates in the interior of the circle with radius r, centered at the origin, i.e. x2 + y2 < r2.
+Consider the set Ir of points (x,y) with integer coordinates in the interior of the circle with radius r, centered at the origin, i.e. x2 + y2 < r2.
 For a radius of 2, I2 contains the nine points (0,0), (1,0), (1,1), (0,1), (-1,1), (-1,0), (-1,-1), (0,-1) and (1,-1). There are eight triangles having all three vertices in I2 which contain the origin in the interior. Two of them are shown below, the others are obtained from these by rotation.
 
 
@@ -26,7 +27,7 @@ How many triangles are there containing the origin in the interior and having al
 ```yml
 tests:
   - text: <code>euler184()</code> should return 1725323624056.
-    testString: 'assert.strictEqual(euler184(), 1725323624056, "<code>euler184()</code> should return 1725323624056.");'
+    testString: assert.strictEqual(euler184(), 1725323624056);
 
 ```
 
@@ -58,4 +59,5 @@ euler184();
 ```js
 // solution required
 ```
+
 </section>
